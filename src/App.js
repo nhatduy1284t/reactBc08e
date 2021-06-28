@@ -2,10 +2,12 @@
 // import ClassComponent from "./Components/ClassComponent";
 // import HomeComponent from "./Components/BaiTapLayoutComponent/HomeComponent";
 import Databinding from "./Databinding/Databinding";
+import BaiTapThucHanhLayout from "./Components/BaiTapThucHanhLayout/BaiTapThucHanhLayout";
 function App() {
    return (
       <div className="App">
-        <Databinding/>
+        {/* <Databinding/> */}
+        <BaiTapThucHanhLayout></BaiTapThucHanhLayout>
       </div>
    );
 }
