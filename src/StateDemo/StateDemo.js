@@ -11,7 +11,7 @@ export default class StateDemo extends Component {
    state = {
       isLogin: false,
       fSize: 15,
-      imgSrc: "../../public/",
+      imgSrc: "",
    };
 
    userName = "Khải";
