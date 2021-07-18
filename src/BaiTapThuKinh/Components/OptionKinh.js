@@ -74,6 +74,7 @@ export default class OptionKinh extends Component {
                 width: "130px",
                 top: "80px",
                 left: "60px",
+                opacity:'0.7'
               }}
             />
             <div className="position-absolute w-100" style={{ bottom: "0", left: "0", backgroundColor: "rgba(255, 165, 0,0.2)" }}>
