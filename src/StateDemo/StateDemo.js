@@ -13,7 +13,6 @@ export default class StateDemo extends Component {
       fSize: 15,
       imgSrc: "../../public/",
    };
-
    userName = "Khải";
 
    renderLogin = () => {
