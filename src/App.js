@@ -1,6 +1,7 @@
 // import FunctionComponent from "./Components/FunctionComponent";
 // import ClassComponent from "./Components/ClassComponent";
 // import HomeComponent from "./Components/BaiTapLayoutComponent/HomeComponent";
+<<<<<<< HEAD
 // import Databinding from "./Databinding/Databinding";
 // import BaiTapThucHanhLayout from "./Components/BaiTapThucHanhLayout/BaiTapThucHanhLayout";
 // import Demo from "./Databinding/Demo";
@@ -24,6 +25,15 @@ function App() {
        {/* <HomeLayout /> */}
        {/* <RenderWithMap/> */}
        <ShoesShop/>
+=======
+import Databinding from "./Databinding/Databinding";
+import BaiTapThucHanhLayout from "./Components/BaiTapThucHanhLayout/BaiTapThucHanhLayout";
+function App() {
+   return (
+      <div className="App">
+        {/* <Databinding/> */}
+        <BaiTapThucHanhLayout></BaiTapThucHanhLayout>
+>>>>>>> parent of bbee228 ('buoi2_component_style_event_state')
       </div>
    );
 }
