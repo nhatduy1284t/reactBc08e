@@ -1,15 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-let arrGlasses = [];
-let promise = axios({
-  url: "./dataGlasses.json",
-  method: "GET",
-  responseType: "json",
-});
-promise.then(function (result) {
-  arrGlasses = result.data;
-  console.log(arrGlasses);
-});
+import { computeHeadingLevel } from "@testing-library/react";
+import ButtonKinh from "./ButtonKinh";
+import PostData from "../Data/dataGlasses.json";
 
 export default class OptionKinh extends Component {
   state = {
@@ -18,38 +11,37 @@ export default class OptionKinh extends Component {
     desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip.",
   };
 
-  renderButtonOptionKinh = (ma) => {
-    return (
-      <button
-        style={{
-          width: "170px",
-          height: "100px",
-          backgroundColor: "white",
-          backgroundSize: "100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundImage: `url('./img/glassesImage/g${ma}.jpg')`,
-        }}
-        onClick={() => {
-          let name = "";
-          let description = "";
+  setStateOptionKinh=setStateOptionKinh.bind(this);
 
-          for (let index in arrGlasses) {
-            if (arrGlasses[index]["id"] == ma) {
-              name = arrGlasses[index]["name"];
-              description = arrGlasses[index]["desc"];
-            }
-          }
-          let newState = {
-            maKinh: ma,
-            tenKinh: name,
-            desc: description,
-          };
-          this.setState(newState);
-        }}
-      ></button>
-    );
+  renderArrButtonKinh = () => {
+    let arrGlasses = PostData;
+    let content = [];
+    content = arrGlasses.map((glass, index) => {
+      return <ButtonKinh data={this.state} setStateOptionKinh={this.setStateOptionKinh} glass={glass} key={index}></ButtonKinh>;
+    });
+
+
+    return content;
   };
+  // renderButtonOptionKinh = (ma) => {
+  //   return (
+  //     <button
+  //       style={{
+  //         width: "170px",
+  //         height: "100px",
+  //         backgroundColor: "white",
+  //         backgroundSize: "100%",
+  //         backgroundPosition: "center",
+  //         backgroundRepeat: "no-repeat",
+  //         backgroundImage: `url('./img/glassesImage/g${ma}.jpg')`,
+  //       }}
+  //       onClick={() => {
+  //         let name = "";
+  //         let description = "";
+  //       }}
+  //     ></button>
+  //   );
+  // };
   render() {
     return (
       <div
@@ -74,7 +66,7 @@ export default class OptionKinh extends Component {
                 width: "130px",
                 top: "80px",
                 left: "60px",
-                opacity:'0.7'
+                opacity: "0.7",
               }}
             />
             <div className="position-absolute w-100" style={{ bottom: "0", left: "0", backgroundColor: "rgba(255, 165, 0,0.2)" }}>
@@ -94,18 +86,12 @@ export default class OptionKinh extends Component {
         </div>
 
         <div>
-          {this.renderButtonOptionKinh(1)}
-          {this.renderButtonOptionKinh(2)}
-          {this.renderButtonOptionKinh(3)}
-          {this.renderButtonOptionKinh(4)}
-          {this.renderButtonOptionKinh(5)}
-          {this.renderButtonOptionKinh(6)}
-          {this.renderButtonOptionKinh(7)}
-          {this.renderButtonOptionKinh(8)}
-          {this.renderButtonOptionKinh(9)}
-
+          {this.renderArrButtonKinh()}
         </div>
       </div>
     );
   }
+}
+function setStateOptionKinh(newState) {
+  this.setState(newState);
 }
