@@ -131,7 +131,7 @@ export default class ShoesShop extends Component {
 
   render() {
     return (
-      <div className="container row">
+      <div className="row">
           <p style={{verticalAlign:'center'}} className="col-6 text-center">Bài tập ShoesShop</p>
         <div className="col-6">
           <h1 className="text-center">Shoes Shop</h1>
