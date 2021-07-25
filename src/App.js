@@ -3,7 +3,8 @@
 // import HomeComponent from "./Components/BaiTapLayoutComponent/HomeComponent";
 // import Databinding from "./Databinding/Databinding";
 
-import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
+// import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
+import CarStore from "./Props/ExerciseCarStore/Revise/CarStore";
 
 
 
@@ -17,7 +18,8 @@ function App() {
         {/* <Databinding/> */}
         {/* <ShoesShop/> */}
         {/* <BaiTapXemChiTiet/> */}
-      <ExerciseCarStore/>
+      {/* <ExerciseCarStore/> */}
+      <CarStore/>
       </div>
    );
 }
