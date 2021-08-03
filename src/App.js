@@ -3,6 +3,7 @@
 // import HomeComponent from "./Components/BaiTapLayoutComponent/HomeComponent";
 // import Databinding from "./Databinding/Databinding";
 
+import BaiTapGameXucXac from "./DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac";
 import BaiTapGioHang from "./DemoRedux/BaiTapGioHang/BaiTapGioHang";
 import ExerciseCartPractice from "./Props/ExerciseCart_Practice/ExerciseCartPractice";
 
@@ -28,7 +29,8 @@ function App() {
       {/* <CarStore/> */}
       {/* <ExerciseCart/> */}
       {/* <ExerciseCartPractice/> */}
-      <BaiTapGioHang/>
+      {/* <BaiTapGioHang/> */}
+      <BaiTapGameXucXac/>
       </div>
    );
 }
