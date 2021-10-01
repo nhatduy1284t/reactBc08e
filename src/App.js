@@ -3,9 +3,11 @@
 // import HomeComponent from "./Components/BaiTapLayoutComponent/HomeComponent";
 // import Databinding from "./Databinding/Databinding";
 
-import BaiTapGameXucXac from "./DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac";
-import BaiTapGioHang from "./DemoRedux/BaiTapGioHang/BaiTapGioHang";
-import ExerciseCartPractice from "./Props/ExerciseCart_Practice/ExerciseCartPractice";
+//
+//import BaiTapGioHang from "./DemoRedux/BaiTapGioHang/BaiTapGioHang";
+import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
+import LifeCycleReact from "./LifeCycleReact/LifeCycleReact";
+//import ExerciseCartPractice from "./Props/ExerciseCart_Practice/ExerciseCartPractice";
 
 // import ExerciseCart from "./Props/ExerciseCart/ExerciseCart";
 
@@ -18,7 +20,6 @@ import ExerciseCartPractice from "./Props/ExerciseCart_Practice/ExerciseCartPrac
 
 // import ShoesShop from "./Props/ShoesShop";
 
-
 function App() {
    return (
       <div className="App">
@@ -30,7 +31,9 @@ function App() {
       {/* <ExerciseCart/> */}
       {/* <ExerciseCartPractice/> */}
       {/* <BaiTapGioHang/> */}
-      <BaiTapGameXucXac/>
+      {/* <BaiTapGameXucXac/> */}
+      <BaiTapQuanLyNguoiDung/>
+      {/* <LifeCycleReact/> */}
       </div>
    );
 }
